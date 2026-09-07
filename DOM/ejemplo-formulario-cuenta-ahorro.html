@@ -127,7 +127,7 @@
     <script>
 
         // Estado de la aplicación
-        let saldo = 500;
+        let saldo = 3000;
 
         const saldoTexto = document.querySelector("#saldo");
         const ingresoInput = document.querySelector("#ingreso");
@@ -140,7 +140,7 @@
         boton.addEventListener("click", function () {
 
             // sumamos lo que quiere ingresar el usuario al saldo actual
-            saldo = saldo + ingresoInput.value;
+            saldo = saldo + Number(ingresoInput.value);
 
             // Actualizamos la interfaz del usuario con el nuevo saldo
             saldoTexto.textContent = saldo;
