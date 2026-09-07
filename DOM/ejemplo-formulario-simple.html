@@ -6,7 +6,6 @@
     <title>Inscripción al curso</title>
 
     <style>
-
         * {
             box-sizing: border-box;
         }
@@ -104,7 +103,6 @@
             border-radius: 8px;
             line-height: 1.5;
         }
-
     </style>
 </head>
 
@@ -128,11 +126,7 @@
                     Nombre y apellidos
                 </label>
 
-                <input
-                    id="nombre"
-                    type="text"
-                    placeholder="Ej. Ana García"
-                >
+                <input id="nombre" type="text" placeholder="Ej. Ana García">
 
             </div>
 
@@ -143,11 +137,7 @@
                     Edad
                 </label>
 
-                <input
-                    id="edad"
-                    type="number"
-                    placeholder="Ej. 35"
-                >
+                <input id="edad" type="number" placeholder="Ej. 35">
 
             </div>
 
@@ -178,12 +168,29 @@
 
 
     <script>
+        const precioCurso = 1000; // precio base 
 
         /* Paso 1: Obtenemos todos los elementos de la interfaz con los que vamos a interactuar */
-        
-        /* Paso 2: Asociar un evento 'click' al botón */
+        const nombre = document.querySelector("#nombre");
+        const edad = document.querySelector("#edad");
+        const boton = document.querySelector("#registrarse");
+        const resultado = document.querySelector("#resultado");
 
-        /* Paso 3: Dentro de la función, obtener los valores que ha escrito el usuario. Hacer los cálculos u operaciones necesarias. Ofrecer un resultado si el programa así lo pide*/
+        /* Paso 2: Asociar un evento 'click' al botón */
+        boton.addEventListener("click", function () {
+            /* Paso 3: Dentro de la función, obtener los valores que ha escrito el usuario. Hacer los cálculos u operaciones necesarias. Ofrecer un resultado si el programa así lo pide*/
+
+            let precioFinal = precioCurso;
+
+            if (edad.value >= 50) {
+                // Aplicamos un descuento del 10%
+                precioFinal = precioFinal * 0.9;
+            }
+
+            resultado.textContent = `${nombre.value} te has registrado en el curso correctamente. El precio final del curso es:  ${precioFinal} €`;
+        });
+
+
     </script>
 
 </body>
