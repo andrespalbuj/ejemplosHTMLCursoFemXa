@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inscripción al curso</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .contenedor {
+            max-width: 550px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .tarjeta {
+            background-color: white;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .descripcion {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .informacion {
+            background-color: #eff6ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin: 25px 0;
+        }
+
+        .informacion p {
+            margin: 7px 0;
+        }
+
+        .descuento {
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            background-color: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #f0fdf4;
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="tarjeta">
+
+            <h1>🎓 Inscripción al curso</h1>
+
+            <p class="descripcion">
+                Curso de Desarrollo Web
+            </p>
+
+
+            <div class="campo">
+
+                <label for="nombre">
+                    Nombre y apellidos
+                </label>
+
+                <input
+                    id="nombre"
+                    type="text"
+                    placeholder="Ej. Ana García"
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="edad">
+                    Edad
+                </label>
+
+                <input
+                    id="edad"
+                    type="number"
+                    placeholder="Ej. 35"
+                >
+
+            </div>
+
+
+            <div class="informacion">
+
+                <p>
+                    💶 <strong>Precio del curso:</strong> 1000 €
+                </p>
+
+                <p class="descuento">
+                    🎁 Mayores de 50 años: 10 % de descuento
+                </p>
+
+            </div>
+
+
+            <button id="registrarse">
+                Registrarse en el curso
+            </button>
+
+
+            <div id="resultado"></div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* Paso 1: Obtenemos todos los elementos de la interfaz con los que vamos a interactuar */
+        
+        /* Paso 2: Asociar un evento 'click' al botón */
+
+        /* Paso 3: Dentro de la función, obtener los valores que ha escrito el usuario. Hacer los cálculos u operaciones necesarias. Ofrecer un resultado si el programa así lo pide*/
+    </script>
+
+</body>
+
+</html>
