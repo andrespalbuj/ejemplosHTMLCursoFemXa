@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saludo personalizado</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .tarjeta {
+            width: 400px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+
+        #saludo {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #eff6ff;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tarjeta">
+
+        <h1>👋 Saludo personalizado</h1>
+
+        <label for="nombre">
+            Escribe tu nombre:
+        </label>
+
+        <input
+            id="nombre"
+            type="text"
+            placeholder="Ej. Óscar"
+        >
+
+        <div id="saludo">
+            ¡Hola!
+        </div>
+
+    </div>
+
+    <script>
+
+        const nombre = document.querySelector("#nombre");
+        const saludo = document.querySelector("#saludo");
+
+        nombre.addEventListener("input", function () {
+
+            saludo.textContent = "¡Hola, " + nombre.value + "!";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

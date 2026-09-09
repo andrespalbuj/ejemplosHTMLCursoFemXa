@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Elegir postre</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .tarjeta {
+            width: 400px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #fff7ed;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tarjeta">
+
+        <h1>🍰 Elige tu postre</h1>
+
+        <label for="postre">
+            Selecciona un postre:
+        </label>
+
+        <select id="postre">
+            <option value="tarta" selected>Tarta</option>
+            <option value="helado">Helado</option>
+            <option value="flan">Flan</option>
+            <option value="tiramisú">Tiramisú</option>
+        </select>
+
+        <div id="resultado">
+            Has elegido: tarta
+        </div>
+
+    </div>
+
+    <script>
+
+        const postre = document.querySelector("#postre");
+        const resultado = document.querySelector("#resultado");
+
+        postre.addEventListener("change", function () {
+
+            resultado.textContent = "Has elegido: " + postre.value;
+
+        });
+
+    </script>
+
+</body>
+
+</html>

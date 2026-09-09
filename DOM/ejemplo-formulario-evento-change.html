@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tamaño del texto</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .tarjeta {
+            width: 450px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        #texto {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tarjeta">
+
+        <h1>🔤 Tamaño del texto</h1>
+
+        <label for="tamano">
+            Elige un tamaño:
+        </label>
+
+        <select id="tamano">
+
+            <option value="16px">Pequeño</option>
+            <option value="20px" selected>Normal</option>
+            <option value="26px">Grande</option>
+            <option value="32px">Muy grande</option>
+
+        </select>
+
+        <p id="texto">
+            Este texto cambiará de tamaño cuando selecciones una opción.
+        </p>
+
+    </div>
+
+    <script>
+
+        const tamano = document.querySelector("#tamano");
+        const texto = document.querySelector("#texto");
+
+        tamano.addEventListener("change", function () {
+
+            texto.style.fontSize = tamano.value;
+
+        });
+
+    </script>
+
+</body>
+
+</html>
