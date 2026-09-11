@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Mi perfil</h1>
+
+    <p>Nombre: <span id="nombre">Pepe</span></p>
+
+    <p>Edad: <span id="edad">50</span></p>
+
+    <button id="boton">Cumplir años</button>
+
+    <script>
+        // Estas variables me sirven para procesar datos, realizar cálculos, recordar valores,etc.
+        let edad = 50;
+        let nombre = "Pepe";
+
+
+        // "las del querySelector" son para recuperar información de la pantalla o para establecer información
+        const botonElemento = document.querySelector("#boton");
+
+        botonElemento.addEventListener("click", function () {
+            const campoEdadElemento = document.querySelector("#edad");
+
+            edad++;
+            campoEdadElemento.textContent = edad;
+        });
+
+    </script>
+
+</body>
+
+</html>

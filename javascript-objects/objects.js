@@ -20,6 +20,8 @@ const caracol = {
     rasgos: ["Baba", "Caparazón"]
 };
 
+
+
 // objeto abeja
 const abeja = {
     descripcion: "Bicho peludito pequeñito que recolecta polen",
