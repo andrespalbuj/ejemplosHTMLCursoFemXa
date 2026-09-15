@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Diferencia textContent y innerHTML</h1>
+</head>
+<body>
+    <p id="prueba-uno"></p>
+    <p id="prueba-dos"></p>
+
+    <script>
+    // textContent: solo recupera o establece información textual
+    const pruebaUno = document.querySelector("#prueba-uno");
+    pruebaUno.textContent = "Esto es una <strong>prueba</strong>";
+
+    // innerHTML permite recuperar o introducir HTML nuevo
+    const pruebaDos = document.querySelector("#prueba-dos");
+    pruebaDos.innerHTML = "Esto es una <strong style='color:red'>prueba</strong>";
+
+    
+
+    </script>
+</body>
+</html>
